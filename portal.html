@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Document System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>University Document System</h1>
+        <p>Manage academic and administrative files efficiently.</p>
+        <button id="upload-button">Upload Document</button>
+    </header>
+
+    <main>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search by name, course, description...">
+            <button id="search-button">Search</button>
+        </div>
+
+        <div class="document-list">
+            <h2>Your Documents</h2>
+            <p id="loading-message">Loading documents...</p>
+            <div id="documents-container">
+                <div class="document-item">
+                    <h3>Example Document Title</h3>
+                    <p>Course: CSC101 - Department: Computer Science</p>
+                    <p>Description: This is an example description.</p>
+                    <p class="uploaded-date">Uploaded: 2025-01-15</p>
+                    <div class="actions">
+                        <button class="view-details-button">View Details</button>
+                        <button class="delete-button">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script2.js"></script>
+</body>
+</html>

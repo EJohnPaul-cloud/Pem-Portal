@@ -1,0 +1,210 @@
+/* Basic Reset & Body Styles */
+body {
+    margin: 0; /* Removes default margin around the page */
+    font-family: Arial, sans-serif; /* Sets a simple font */
+    background-color: #f4f7f6; /* Light gray background */
+    color: #333; /* Dark gray text color */
+    line-height: 1.6; /* Spacing between lines of text */
+}
+
+/* Container for the main content */
+.container {
+    max-width: 960px; /* Maximum width of the content area */
+    margin: 40px auto; /* Centers the container horizontally and adds top/bottom space */
+    padding: 20px; /* Space inside the container */
+    background-color: #ffffff; /* White background for the main content area */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Light gray line at the bottom */
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2c3e50; /* Dark blue for the main heading */
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #7f8c8d; /* Muted gray for the subheading */
+    font-size: 0.9em;
+}
+
+/* Buttons */
+button {
+    background-color: #3498db; /* Blue background for buttons */
+    color: white; /* White text */
+    padding: 10px 20px; /* Space inside the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Changes mouse cursor to a pointer on hover */
+    font-size: 1em;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex; /* Arranges children (input, button) in a row */
+    gap: 10px; /* Space between flex items */
+    margin-bottom: 30px;
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1; /* Allows the input to take up available space */
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Document List Styles */
+.document-list h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#loading-message {
+    text-align: center;
+    font-style: italic;
+    color: #7f8c8d;
+    padding: 20px;
+}
+
+#documents-container {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.document-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px; /* Space between document items */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.document-item h3 {
+    color: #34495e; /* Darker blue-gray for document titles */
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.document-item p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.document-item .uploaded-date {
+    font-size: 0.8em;
+    color: #999;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.document-item .actions {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.document-item .actions button {
+    padding: 8px 15px;
+    font-size: 0.85em;
+    margin-left: 10px;
+}
+
+.document-item .actions .delete-button {
+    background-color: #e74c3c; /* Red for delete button */
+}
+
+.document-item .actions .delete-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+.document-item .actions .view-details-button {
+    background-color: #9b59b6; /* Purple for view details */
+}
+
+.document-item .actions .view-details-button:hover {
+    background-color: #8e44ad; /* Darker purple on hover */
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Styles for screens smaller than 768px (e.g., tablets and phones) */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px; /* Reduce margin on smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Make header text smaller */
+    }
+
+    header p {
+        font-size: 0.8em;
+    }
+
+    button {
+        padding: 8px 15px; /* Slightly smaller buttons */
+        font-size: 0.9em;
+    }
+
+    .search-bar {
+        flex-direction: column; /* Stack input and button vertically */
+        gap: 15px; /* Increase gap for vertical stacking */
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%; /* Make input take full width */
+    }
+
+    .document-item {
+        padding: 10px; /* Reduce padding in document items */
+    }
+
+    .document-item .actions {
+        text-align: center; /* Center action buttons */
+        margin-top: 10px;
+    }
+
+    .document-item .actions button {
+        margin: 5px; /* Add margin around buttons when stacked */
+        display: block; /* Make buttons stack vertically */
+        width: calc(100% - 10px); /* Adjust width to fit container with margin */
+    }
+}
+
+/* Styles for screens smaller than 480px (e.g., small phones) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 0.9em; /* Make base font a bit smaller for very small screens */
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .document-item h3 {
+        font-size: 1.1em;
+    }
+
+    .document-item p {
+        font-size: 0.8em;
+    }
+}
